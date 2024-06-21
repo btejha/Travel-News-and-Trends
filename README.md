@@ -1,6 +1,34 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+By Tejha Bollu
+# Travel News and Trends
+
+## Overview
+This is a simple web application to display travel news and trends using the NY Times API.
+The app is built with Next.js and styled with Mantine.
+
+## Architectural Decisions
+- **Next.js:** Chosen for its ease of use and built-in server-side rendering. Verion: 14.2.4
+- **Mantine:** Used as the component library for consistent and easily customizable styling. Version:^4.0.0
+- **Axios:** Used for making HTTP requests to the NY Times API. Version:^1.7.2
+- **Jest & React Testing Library:** Used for unit testing to ensure reliability. Version: ^29.7.0
+
+## Features
+- Display a list of travel news articles.
+- Show more details of an article when clicked.
+- Responsive design and user-friendly interface.
+
+## Setup
+1. Clone the repository.
+2. Install dependencies: `npm install`
+3. Add your NY Times API key in `lib/api.js`
+4. Run the development server: `npm run dev`
+5. Run tests: `npm test`
+
+
+
 ## Getting Started
+
 
 First, run the development server:
 
@@ -14,7 +42,7 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3001) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
