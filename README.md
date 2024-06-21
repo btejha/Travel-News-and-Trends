@@ -1,7 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-By Tejha Bollu
-# Travel News and Trends
+# Travel-News-and-Trends By Tejha Bollu
+This is a simple web application to display travel news and trends using the NY Times API. The app is built with Next.js and styled with Mantine.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Overview
 This is a simple web application to display travel news and trends using the NY Times API.
