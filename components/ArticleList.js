@@ -2,6 +2,7 @@
 import {useState} from 'react';
 import {MantineProvider, Grid, Text, Button, Container, Title, Image, createStyles} from '@mantine/core';
 import ArticleDetail from './ArticleDetail';
+import PropTypes from 'prop-types';
 
 const useStyles = createStyles((theme) => ({
     container: {
@@ -86,7 +87,7 @@ const ArticleList = ({articles}) => {
                         currentArticles.length > 0 ? (
                             currentArticles.map(article => (
                                 article.url !== "" ? (
-                                    <Grid key={article.url} shadow="sm" withBorder variant="dashed"
+                                    <Grid key={article.url} shadow="sm" variant="dashed"
                                           className={classes.grid}>
                                         <Grid.Col span={4}>
                                             {article.multimedia[1].url && (
@@ -128,10 +129,27 @@ const ArticleList = ({articles}) => {
                             Next
                         </Button>
                     </div>) : (null)}
-
+                {selectedArticle ? (
+                    <div>
+                        <h2>{selectedArticle.title}</h2>
+                        <p>{selectedArticle.byline}</p>
+                        <p>{selectedArticle.published_date}</p>
+                        <p>{selectedArticle.abstract}</p>
+                        {selectedArticle.multimedia && selectedArticle.multimedia.map((media, index) => (
+                            <div key={index}>
+                                <img src={media.url} alt={media.caption}/>
+                                <p>{media.caption}</p>
+                            </div>
+                        ))}
+                        <Button onClick={() => setSelectedArticle(null)}>Close</Button>
+                    </div>) : (null)}
             </Container>
         </MantineProvider>
     );
+};
+
+ArticleList.propTypes = {
+    article: PropTypes.array.isRequired,
 };
 
 export default ArticleList;
