@@ -58,7 +58,7 @@ const ArticleDetail = ({article, onBack}) => {
                 <Button onClick={onBack} variant="filled" className={classes.backButtons}>
                     Back to list
                 </Button>
-                <Grid shadow="sm" padding="lg" radius="md" withBorder variant="dashed" className={classes.grid}>
+                <Grid shadow="sm" padding="lg" radius="md" variant="dashed" className={classes.grid}>
                     <Grid.Col span={6}>
                         {article.multimedia[0].url && (
                             <Image src={article.multimedia[0].url} alt={article.multimedia[0].url}
